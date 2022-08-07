@@ -5,6 +5,7 @@ import 'firebase/compat/auth';
 const firebaseConfig = {
     apiKey: "AIzaSyApSiNWOCgRObPMCOe8G03HB_Vzlo-YmhI",
     authDomain: "azot-bitz-app.firebaseapp.com",
+    databaseURL: "https://azot-bitz-app-default-rtdb.firebaseio.com",
     projectId: "azot-bitz-app",
     storageBucket: "azot-bitz-app.appspot.com",
     messagingSenderId: "92180241050",

@@ -1,105 +1,81 @@
-import * as React from 'react';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Skeleton from '@mui/material/Skeleton';
-import {useDispatch, useSelector} from "react-redux";
-import {logoutInitiate} from "../redux/reducers/userReducer/userReducer";
-import {useEffect} from "react";
-import {useNavigate} from "react-router-dom";
-import {userSelector} from "../redux/reducers/userReducer/userSelector";
+import React, { useEffect, useState } from "react";
+import { db as firebaseDB } from "../components/Firebase";
 
-const data = [
-    {
-        src: 'https://i.ytimg.com/vi/pLqipJNItIo/hqdefault.jpg?sqp=-oaymwEYCNIBEHZIVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBkklsyaw9FxDmMKapyBYCn9tbPNQ',
-        title: 'Don Diablo @ Tomorrowland Main Stage 2019 | Official…',
-        channel: 'Don Diablo',
-        views: '396 k views',
-        createdAt: 'a week ago',
-    },
-    {
-        src: 'https://i.ytimg.com/vi/_Uu12zY01ts/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCpX6Jan2rxrCAZxJYDXppTP4MoQA',
-        title: 'Queen - Greatest Hits',
-        channel: 'Queen Official',
-        views: '40 M views',
-        createdAt: '3 years ago',
-    },
-    {
-        src: 'https://i.ytimg.com/vi/kkLk2XWMBf8/hqdefault.jpg?sqp=-oaymwEYCNIBEHZIVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLB4GZTFu1Ju2EPPPXnhMZtFVvYBaw',
-        title: 'Calvin Harris, Sam Smith - Promises (Official Video)',
-        channel: 'Calvin Harris',
-        views: '130 M views',
-        createdAt: '10 months ago',
-    },
-];
+import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import {Table, TableBody, TableCell, TableHead, TableRow} from "@mui/material";
+import Button from "@mui/material/Button";
 
-interface MediaProps {
-    loading?: boolean;
-}
+const HomePage = () => {
+  const [data, setData] = useState({});
 
-function Media(props: MediaProps) {
-    const { loading = false } = props;
-    const navigate = useNavigate();
-    const user = useSelector(userSelector);
-    const dispatch = useDispatch();
-    const logOut = () => {
-        dispatch(logoutInitiate())
+  useEffect(() => {
+    firebaseDB.child("contacts").on("value", (snapshot) => {
+      if (snapshot.val() !== null) {
+        setData({ ...snapshot.val() });
+      } else {
+        setData({});
+      }
+    });
+
+    return () => {
+      setData({});
+    };
+  }, []);
+
+  const onDelete = (id) => {
+    if (window.confirm("Are you sure?")) {
+      firebaseDB.child(`contacts/${id}`).remove((err) => {
+        if (err) {
+          toast.error(err);
+        } else {
+          toast.success("Contact deleted successfully");
+        }
+      });
     }
+  };
 
-    useEffect(() => {
-        if(user === null){
-        navigate('/login')}
-    }, [user, navigate])
+  return (
+    <div style={{ marginTop: "50px" }}>
+      <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
+        <TableHead>
+          <TableRow>
+            <TableCell align='center'>No.</TableCell>
+            <TableCell align='center'>Name</TableCell>
+            <TableCell align='center'>Email</TableCell>
+            <TableCell align='center'>Contact</TableCell>
+            <TableCell align='center'>Action</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {Object.keys(data).map((id, index) => {
+            return (
+              <TableRow key={id}>
+                <TableCell component='th' scope={"row"}>{index + 1}</TableCell>
+                <TableCell align='center'>{data[id].name}</TableCell>
+                <TableCell align='center'>{data[id].email}</TableCell>
+                <TableCell align='center'>{data[id].contact}</TableCell>
+                <TableCell align='center'>
+                  <Link to={`/update/${id}`}>
+                    <Button variant='contained' color='primary'>Edit</Button>
+                  </Link>
+                  <Button
+                     variant='contained' color='error'
+                    onClick={() => onDelete(id)}
+                  >
+                    Delete
+                  </Button>
+                  <Link to={`/view/${id}`}>
+                    <Button variant='contained' color='success'>View</Button>
+                  </Link>
+                </TableCell>
+              </TableRow>
+            );
+          })}
+        </TableBody>
+      </Table>
+    </div>
+  );
+};
 
-    return (
-        <>
-            <div>
-                <button onClick={logOut}>LOG OUT</button>
-            </div>
-        <Grid container wrap="nowrap" justifyContent='center'>
-            {(loading ? Array.from(new Array(3)) : data).map((item, index) => (
-                <Box key={index} sx={{ width: 210, marginRight: 0.5, my: 5 }}>
-                    {item ? (
-                        <img
-                            style={{ width: 210, height: 118 }}
-                            alt={item.title}
-                            src={item.src}
-                        />
-                    ) : (
-                        <Skeleton variant="rectangular" width={210} height={118} />
-                    )}
-                    {item ? (
-                        <Box sx={{ pr: 2 }}>
-                            <Typography gutterBottom variant="body2">
-                                {item.title}
-                            </Typography>
-                            <Typography display="block" variant="caption" color="text.secondary">
-                                {item.channel}
-                            </Typography>
-                            <Typography variant="caption" color="text.secondary">
-                                {`${item.views} • ${item.createdAt}`}
-                            </Typography>
-                        </Box>
-                    ) : (
-                        <Box sx={{ pt: 0.5 }}>
-                            <Skeleton />
-                            <Skeleton width="60%" />
-                        </Box>
-                    )}
-                </Box>
-            ))}
-        </Grid>
-            </>
-    );
-
-}
-
-
-export default function YouTube() {
-    return (
-        <Box sx={{ overflow: 'hidden' }}>
-            <Media loading />
-            <Media />
-        </Box>
-    );
-}
+export default HomePage;

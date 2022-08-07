@@ -3,6 +3,9 @@ import {useDispatch, useSelector} from "react-redux";
 import {loginInitiate} from "../redux/reducers/userReducer/userReducer";
 import {userSelector} from "../redux/reducers/userReducer/userSelector";
 import {useNavigate} from "react-router-dom";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
 
 const LoginPage = () => {
     const [email, setEmail] = useState('');
@@ -32,13 +35,25 @@ const LoginPage = () => {
     return (
         <div>
             <h2>Login Page</h2>
-            <form onSubmit={handleSubmit}>
-                <input type="email" placeholder='email' value={email} onChange={(e) => setEmail(e.target.value)}/>
-                <input type="password" placeholder='password' value={password} onChange={(e) => setPassword(e.target.value)}/>
-                <button type={'submit'}>LOG IN</button>
+            <Box
+                sx={{
+                    '& .MuiTextField-root': { m: 1, width: '25ch' }
+                }}
+                autoComplete="off"
+            >
+            <form style={{display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center'}} onSubmit={handleSubmit}>
+                <TextField type="email" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                <TextField type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}/>
+                <br/>
+                <Button variant='contained' type={'submit'}>LOG IN</Button>
             </form>
+            </Box>
+            <br/>
+            <hr/>
             <h2>You Have Not Login?</h2>
-            <button onClick={signUp}>SIGN UP</button>
+            <Button variant='outlined' onClick={signUp}>SIGN UP</Button>
         </div>
     );
 };

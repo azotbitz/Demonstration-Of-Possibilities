@@ -16,7 +16,7 @@ const TodosPage = () => {
 
     if(loading) {
         return (
-            <div><h2>Идет Загрузка</h2></div>
+            <div><h2>Loading</h2></div>
         )
     }
 

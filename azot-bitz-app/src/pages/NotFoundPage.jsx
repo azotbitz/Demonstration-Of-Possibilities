@@ -5,13 +5,9 @@ import CustomLink from "../components/CustomLink";
 const NotFoundPage = () => {
     return (
         <div>
-            Page Not Found. Try Again Later.
-            <hr/>
-            <CustomLink to={'/chats'}><Button variant="contained">Chats</Button></CustomLink>
+            <h1>Page Not Found. Try Again Later.</h1>
             <hr/>
             <CustomLink to={'/'}><Button variant="contained">Home</Button></CustomLink>
-            <hr/>
-            <CustomLink to={'/profile'}><Button variant="contained">Profile</Button></CustomLink>
         </div>
     );
 };

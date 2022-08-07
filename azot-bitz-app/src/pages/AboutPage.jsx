@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-export default function MediaCard() {
+export default function AboutPage() {
     return (
         <Card sx={{ maxWidth: 700, paddingTop: '20px',margin: '0 auto', justifyContent: 'center' }}>
             <CardMedia
