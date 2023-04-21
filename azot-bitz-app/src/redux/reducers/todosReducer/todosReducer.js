@@ -35,11 +35,12 @@ export const loadTodos = () => {
         return async dispatch => {
             dispatch(getLoading())
             try {
-                const response = await fetch("https://emojihub.herokuapp.com/api/all");
+                const response = await fetch("https://dummyjson.com/todos");
                 if (!response.ok) {
                     throw new Error(`Request failed with status ${response.status}`);
                 }
-                const data = await response.json();
+                const dataMid = await response.json();
+                const data = dataMid.todos
                 dispatch(getTodos(data))
             } catch (e) {
                 dispatch(getError(e))

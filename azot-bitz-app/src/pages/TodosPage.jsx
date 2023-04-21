@@ -32,8 +32,10 @@ const TodosPage = () => {
     return (
         <div>
             {todos.map((todo) => (
-                <div key={todo.htmlCode}>
-                <h2>{todo.name}</h2>
+                <div key={todo.id}>
+                <h2>{todo.todo}</h2>
+                    <h4>{todo.completed}</h4>
+                    <h6>{todo.userId}</h6>
         </div>))}
         </div>
     )

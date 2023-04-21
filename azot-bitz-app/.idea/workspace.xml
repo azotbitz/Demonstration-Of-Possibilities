@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1725564c-6e57-47fb-bc5e-12cb33ef0495" name="Changes" comment="final commit">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/azot-bitz-app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/TodosPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TodosPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/todosReducer/todosReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/todosReducer/todosReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="lesson_10" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2CO5wRCvlgDBo9oKvbf0j7nvhF5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/vasily/WebstormProjects/React-app/azot-bitz-app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/vasily/WebstormProjects/React-app/azot-bitz-app/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/styles" />
+      <recent name="$PROJECT_DIR$/src/pages" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1725564c-6e57-47fb-bc5e-12cb33ef0495" name="Changes" comment="" />
+      <created>1658661030210</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1658661030210</updated>
+      <workItem from="1658661054150" duration="119000" />
+      <workItem from="1658661296896" duration="315000" />
+      <workItem from="1658662271606" duration="722000" />
+      <workItem from="1659346318053" duration="6870000" />
+      <workItem from="1659358425123" duration="311000" />
+      <workItem from="1659360370177" duration="218000" />
+      <workItem from="1659360634605" duration="100000" />
+      <workItem from="1659360778024" duration="94000" />
+      <workItem from="1659361041760" duration="117000" />
+      <workItem from="1659434060684" duration="4005000" />
+      <workItem from="1659700524852" duration="39661000" />
+      <workItem from="1659865901140" duration="4309000" />
+      <workItem from="1660466294664" duration="10261000" />
+      <workItem from="1660513380022" duration="1909000" />
+      <workItem from="1660696531267" duration="599000" />
+      <workItem from="1660938521508" duration="4186000" />
+      <workItem from="1661365214434" duration="3612000" />
+      <workItem from="1661430719641" duration="1499000" />
+      <workItem from="1661606279756" duration="20000" />
+      <workItem from="1661606619181" duration="27000" />
+      <workItem from="1661606804426" duration="443000" />
+      <workItem from="1661607595918" duration="456000" />
+      <workItem from="1661644799529" duration="544000" />
+      <workItem from="1661676408733" duration="36000" />
+      <workItem from="1661679434878" duration="1086000" />
+      <workItem from="1661710433672" duration="841000" />
+      <workItem from="1662037868187" duration="260000" />
+      <workItem from="1662644071662" duration="1879000" />
+      <workItem from="1676961971718" duration="2030000" />
+      <workItem from="1677013063588" duration="2447000" />
+      <workItem from="1677018570899" duration="2494000" />
+      <workItem from="1677847883041" duration="1638000" />
+      <workItem from="1678432209531" duration="467000" />
+      <workItem from="1678435253970" duration="13000" />
+      <workItem from="1678435288502" duration="52000" />
+      <workItem from="1678435449691" duration="50000" />
+      <workItem from="1678436213251" duration="31000" />
+      <workItem from="1678437363113" duration="1505000" />
+      <workItem from="1678705804961" duration="1596000" />
+      <workItem from="1679463557217" duration="3667000" />
+      <workItem from="1679891587345" duration="601000" />
+      <workItem from="1679944639155" duration="5520000" />
+      <workItem from="1680016121063" duration="29000" />
+      <workItem from="1680017566715" duration="1081000" />
+      <workItem from="1680081581502" duration="1735000" />
+      <workItem from="1680088747978" duration="30000" />
+      <workItem from="1680094176891" duration="4202000" />
+      <workItem from="1680271662967" duration="3304000" />
+      <workItem from="1680633970551" duration="693000" />
+      <workItem from="1681362200187" duration="617000" />
+      <workItem from="1681679959524" duration="665000" />
+      <workItem from="1681881466489" duration="130000" />
+      <workItem from="1681881922352" duration="344000" />
+      <workItem from="1681883132400" duration="367000" />
+      <workItem from="1681885057346" duration="2676000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="final commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="final commit" />
+  </component>
+</project>

@@ -73,7 +73,7 @@ const Header = (props) => {
     return (
         <header>
             <Box sx={{ display: 'flex'}}>
-                <AppBar component="nav">
+                <AppBar component="nav" sx={{backgroundColor: 'sienna'}}>
                     <Toolbar>
                         <IconButton
                             color="warning"
@@ -89,7 +89,7 @@ const Header = (props) => {
                             component="div"
                             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                         >
-                            Azot Bitz App
+                            Demonstration Of Possibilities
                         </Typography>
                         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                             { user ? navItems.map((item) => (
